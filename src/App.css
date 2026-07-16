@@ -91,13 +91,17 @@ body {
   background-color: #ffffff;
 }
 
+.mobile-menu.open {
+  display: flex;
+}
+
 .mobile-menu-btn-item {
   background: none;
   border: none;
   text-align: left;
   font-size: 14px;
   color: #444444;
-  padding: 6px 0;
+  padding: 12px 0;
 }
 
 /* ---------- Section base ---------- */
@@ -877,6 +881,32 @@ footer {
 
 @media (max-width: 768px) {
 
+  .navbar-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #dddddd;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    z-index: 99;
+  }
+
   .hero {
     padding: 50px 20px;
   }
@@ -898,15 +928,17 @@ footer {
   .btn-primary,
   .btn-secondary {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
   }
 
   .hero-buttons {
     flex-direction: column;
+    gap: 12px;
   }
 
   .internship-card {
     grid-template-columns: 1fr;
+    padding: 20px;
   }
 
   .projects-grid,
@@ -915,13 +947,81 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .about-stats {
+  .project-links {
     flex-direction: column;
     align-items: stretch;
   }
 
+  .project-link,
+  .project-code-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
   .about-summary {
     flex-direction: column;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-buttons a {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero h1 {
+    font-size: clamp(2.6rem, 12vw, 3rem);
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+
+  .project-body {
+    padding: 16px;
+  }
+
+  .project-image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .award-card {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .awards-marquee-track {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    gap: 14px;
   }
 }
 
