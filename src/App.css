@@ -1082,8 +1082,7 @@ footer {
   }
 
   .tag-chip:not(:last-child)::after {
-    content: " • ";
-    color: #999;
+    content: "";
   }
 
   .contact-buttons {
@@ -1193,12 +1192,14 @@ footer {
 
   .tag-chip {
     display: inline-flex;
-    justify-content: center;
+    justify-content: flex-start;
     font-weight: 700;
     font-size: 13px;
     padding: 10px 12px;
     border-radius: 16px;
-    width: 100%;
+    width: auto;
+    background: #f3f5ff;
+    color: #222;
   }
 
   .internship-card .tag-list,
@@ -1240,12 +1241,7 @@ footer {
   width: max-content;
   padding: 8px 0 24px;
   animation: awards-scroll 35s linear infinite;
-}
-
-.awards-marquee-wrapper:hover .awards-marquee-track {
-  animation-play-state: paused;
-}
-
+    animation-iteration-count: infinite;
 @keyframes awards-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -1262,7 +1258,7 @@ footer {
     width: 260px;
   }
   .awards-marquee-track {
-    animation-duration: 25s;
+    animation-duration: 40s;
   }
 }
 
