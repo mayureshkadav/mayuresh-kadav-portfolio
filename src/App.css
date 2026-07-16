@@ -480,6 +480,50 @@ section {
   margin-bottom: 12px;
 }
 
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .skill-card {
+    border-radius: 16px;
+    padding: 18px;
+    min-height: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .skill-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  .tag-list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 16px;
+    width: 100%;
+  }
+}
+
 /* ---------- Awards ---------- */
 /* ---------- Awards ---------- */
 
@@ -908,7 +952,7 @@ footer {
   }
 
   .hero {
-    padding: 50px 20px;
+    padding: 70px 20px 40px;
   }
 
   .hero h1 {
@@ -998,12 +1042,29 @@ footer {
     font-size: 1rem;
   }
 
+  .hero {
+    padding-top: 90px;
+  }
+
   .project-body {
     padding: 16px;
   }
 
+  .project-card {
+    border-radius: 14px;
+    width: 100%;
+  }
+
   .project-image {
     aspect-ratio: 4 / 3;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .project-image,
+  .project-card {
+    width: 100%;
   }
 
   .award-card {
@@ -1014,6 +1075,18 @@ footer {
   .awards-marquee-track {
     flex-wrap: wrap;
     justify-content: center;
+    animation: none;
+  }
+
+  .awards-marquee {
+    overflow: visible;
+  }
+
+  .awards-track {
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 
   .about-stats {
@@ -1022,6 +1095,40 @@ footer {
 
   .contact-buttons {
     gap: 14px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .skill-card {
+    aspect-ratio: 1 / 1;
+    padding: 18px;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+
+  .skill-card-title {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #222;
+  }
+
+  .tag-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .tag-chip {
+    display: inline-flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 12px;
+    border-radius: 16px;
+    width: 100%;
   }
 }
 

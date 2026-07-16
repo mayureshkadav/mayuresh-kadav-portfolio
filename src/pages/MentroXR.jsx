@@ -216,35 +216,11 @@ Most educational platforms provide passive learning through videos and notes, re
 
   <h2>Research Paper</h2>
 
-  <div
-    style={{
-      display: "grid",
-      gridTemplateColumns: "1.1fr 0.9fr",
-      gap: "70px",
-      alignItems: "center",
-      marginTop: "50px",
-    }}
-  >
-    {/* Left */}
+  <div className="research-grid">
+    <div className="research-copy">
+      <h3>AI-Enabled AR/VR Based Learning Platform</h3>
 
-    <div>
-      <h3
-        style={{
-          fontSize: "28px",
-          marginBottom: "18px",
-          fontWeight: "600",
-        }}
-      >
-        AI-Enabled AR/VR Based Learning Platform
-      </h3>
-
-      <p
-        style={{
-          color: "#666",
-          lineHeight: "1.9",
-          marginBottom: "35px",
-        }}
-      >
+      <p>
         Alongside the development of MentroXR, our team published a research
         paper in the <strong>Journal of Emerging Technologies and Innovative
         Research (JETIR)</strong>. The publication explores how AI, Augmented
@@ -252,51 +228,28 @@ Most educational platforms provide passive learning through videos and notes, re
         immersive learning, virtual laboratories, and intelligent tutoring.
       </p>
 
-      <div
-        style={{
-          display: "flex",
-          gap: "60px",
-          marginBottom: "35px",
-        }}
-      >
+      <div className="research-meta">
         <div>
-          <small style={{ color: "#999" }}>Journal</small>
+          <small>Journal</small>
           <h4>JETIR</h4>
         </div>
 
         <div>
-          <small style={{ color: "#999" }}>Published</small>
+          <small>Published</small>
           <h4>2026</h4>
         </div>
 
         <div>
-          <small style={{ color: "#999" }}>Authors</small>
+          <small>Authors</small>
           <h4>5 Members</h4>
         </div>
       </div>
-
-      {/* <a
-        href="#"
-        className="btn btn--secondary"
-        target="_blank"
-      >
-        View Research Paper ↗
-      </a> */}
     </div>
-
-    {/* Right */}
 
     <img
       src={researchPaper}
       alt="Research Paper"
-      style={{
-        width: "100%",
-        height: "auto",
-        objectFit: "contain",
-        objectPosition: "center",
-        borderRadius: "18px",
-        maxHeight: "720px",
-      }}
+      className="research-image"
     />
   </div>
 </section>
