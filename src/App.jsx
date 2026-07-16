@@ -63,7 +63,7 @@ const PROJECTS = [
     stack: ["React", "Node.js", "MongoDB", "AR/VR"],
     link: "https://learniq-arvr.vercel.app/",
     github: "https://github.com/mayureshkadav/MENTROXR-AI-Integrated-AR-VR-based-Smart-Learning-Platform3",
-    caseStudy: "MentroXR",
+    caseStudy: "mentroxr",
   },
   {
     name: "Kings-Kitchen",
@@ -311,9 +311,9 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
           </div>
 
           <div className="social-row">
-            <a href="https://github.com/mayureshkadav" aria-label="GitHub" target="_main"><Github size={20} /></a>
-            <a href="https://www.linkedin.com/in/mayuresh-kadav-44b606264" aria-label="LinkedIn" target="_main"><Linkedin size={20} /></a>
-            <a href="mailto:kadavmayuresh2@gmail.com" aria-label="Email" target="_main"><Mail size={20} /></a>
+            <a href="https://github.com/mayureshkadav" aria-label="GitHub" target="_blank" rel="noreferrer"><Github size={20} /></a>
+            <a href="https://www.linkedin.com/in/mayuresh-kadav-44b606264" aria-label="LinkedIn" target="_blank" rel="noreferrer"><Linkedin size={20} /></a>
+            <a href="mailto:kadavmayuresh2@gmail.com" aria-label="Email" target="_blank" rel="noreferrer"><Mail size={20} /></a>
           </div>
         </div>
       </section>
@@ -390,7 +390,7 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
           <div className="projects-grid">
             {PROJECTS.map((p, i) => (
               <div className="project-card" key={i}>
-                <img className="project-image" src={p.image} alt={p.name} />
+                <img className="project-image" src={p.image} alt={p.name} loading="lazy" />
                 <div className="project-body">
                   <h3>{p.name}</h3>
                   <p className="project-tagline">{p.tagline}</p>
@@ -401,9 +401,11 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
                     ))}
                   </div>
                   <div className="project-links">
-                    <a className="project-link" href={p.link}>
-                      View Project <ArrowUpRight size={14} />
-                    </a>
+                      {p.link ? (
+                      <a className="project-link" href={p.link} target="_blank" rel="noreferrer">
+                        View Project <ArrowUpRight size={14} />
+                      </a>
+                    ) : null}
                     {p.caseStudy && (
                       <button
                         className="project-link project-case-study"
@@ -413,9 +415,11 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
                         Check case study
                       </button>
                     )}
-                    <a className="project-code-link" href={p.github}>
-                      <Github size={14} /> Code
-                    </a >
+                    {p.github ? (
+                      <a className="project-code-link" href={p.github} target="_blank" rel="noreferrer">
+                        <Github size={14} /> Code
+                      </a>
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -456,7 +460,7 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
         <div className="award-card" key={i}>
           {a.image && (
             <div className="award-image-window">
-              <img src={a.image} alt={`${a.title} award`} />
+              <img src={a.image} alt={`${a.title} award`} loading="lazy" />
             </div>
           )}
           <div className="award-card-body">
@@ -496,7 +500,7 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
             <a className="btn-secondary" href="tel:+917620172187">
                 <Phone size={16} /> +91 7620172187
            </a>
-           <a className="btn-secondary" href="">
+           <a className="btn-secondary" href="https://www.google.com/maps/search/Navi+Mumbai,+Maharashtra" target="_blank" rel="noreferrer">
                 <MapPin size={16} /> Navi Mumbai, Maharashtra
            </a>
            

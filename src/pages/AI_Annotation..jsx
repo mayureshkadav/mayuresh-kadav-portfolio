@@ -99,14 +99,14 @@ export default function AIAnnotationCaseStudy({ onBack }) {
           </div>
 
           <div className="glimpse-card">
-            <img src={annotateDashboard} alt="Dataset view" />
+            <img src={annotateDashboard} alt="Dataset view" loading="lazy" />
             <div className="glimpse-card-body">
               <h3>Dataset Explorer</h3>
             </div>
           </div>
 
           <div className="glimpse-card">
-            <img src={annotateImg} alt="Review panel" />
+            <img src={annotateImg} alt="Review panel" loading="lazy" />
             <div className="glimpse-card-body">
               <h3>Review Panel</h3>
             </div>
@@ -141,15 +141,15 @@ export default function AIAnnotationCaseStudy({ onBack }) {
           </div>
 
           <div className="gallery-item">
-            <img src={annotateDashboard} alt="Dataset explorer preview" />
+            <img src={annotateDashboard} alt="Dataset explorer preview" loading="lazy" />
           </div>
 
           <div className="gallery-item">
-            <img src={annotateImg} alt="Review panel preview" />
+            <img src={annotateImg} alt="Review panel preview" loading="lazy" />
           </div>
 
           <div className="gallery-item">
-            <img src={annotteSignin} alt="Signin screen preview" />
+            <img src={annotteSignin} alt="Signin screen preview" loading="lazy" />
           </div>
         </div>
       </section>

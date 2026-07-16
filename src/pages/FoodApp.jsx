@@ -61,7 +61,7 @@ export default function FoodAppCaseStudy({ onBack }) {
         </div>
 
         <div className="cs-hero__cover">
-          <img src={foodAppCover} alt="Kings Kitchen food delivery app preview" />
+          <img src={foodAppCover} alt="Kings Kitchen food delivery app preview" loading="lazy" />
         </div>
       </section>
 

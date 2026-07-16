@@ -61,9 +61,9 @@ export default function GameCaseStudy({ onBack }) {
         </div>
 
         <div className="cs-hero__cover">
-          <img src={gameCover} alt="Rock Paper Scissors game preview" />
+          <img src={gameCover} alt="Rock Paper Scissors game preview" loading="lazy" />
         </div>
-      </section>
+              </section>
 
       <section className="cs-meta">
         <div className="cs-meta__item">

@@ -136,13 +136,13 @@ Most educational platforms provide passive learning through videos and notes, re
         <h2>What it looks like</h2>
         <div className="gallery-grid">
           <div className="gallery-item gallery-item--wide">
-            <img src={systemarchitecture} alt="System architecture of the MentroXR platform" />
+            <img src={systemarchitecture} alt="System architecture of the MentroXR platform" loading="lazy" />
           </div>
           <div className="gallery-item">
-            <video controls playsInline src={demo1} />
+            <video controls playsInline preload="none" src={demo1} />
           </div>
           <div className="gallery-item">
-            <video controls playsInline src={demo2} />
+            <video controls playsInline preload="none" src={demo2} />
           </div>
         </div>
       </section>
