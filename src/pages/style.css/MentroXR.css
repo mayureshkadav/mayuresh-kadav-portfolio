@@ -270,6 +270,13 @@
   aspect-ratio: 4 / 5;
 }
 
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .gallery-item--wide {
   grid-column: 1 / -1;
   aspect-ratio: 16 / 9;

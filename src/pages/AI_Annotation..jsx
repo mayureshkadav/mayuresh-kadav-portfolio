@@ -138,29 +138,19 @@ export default function AIAnnotationCaseStudy({ onBack }) {
               src={frontendAnnotation}
               alt="Annotation dashboard preview"
             />
-            
-             </div>
-          {/* 
-          <div className="gallery-item">
-            <img src={annotateDashboard} alt="Dashboard glimpse" />
           </div>
 
           <div className="gallery-item">
-            <img src={annotateImg} alt="Dataset glimpse" />
+            <img src={annotateDashboard} alt="Dataset explorer preview" />
           </div>
 
           <div className="gallery-item">
-            <img src={annotteSignin} alt="Signin glimpse" />
-          </div> */}
-        </div>
-        <div>
-          <img src={annotteSignin} alt="Dashboard glimpse" />
-        </div>
-         <div>
-          <img src={annotateDashboard} alt="Dashboard glimpse" />
-        </div>
-         <div>
-          <img src={annotateImg} alt="Dashboard glimpse" />
+            <img src={annotateImg} alt="Review panel preview" />
+          </div>
+
+          <div className="gallery-item">
+            <img src={annotteSignin} alt="Signin screen preview" />
+          </div>
         </div>
       </section>
 
