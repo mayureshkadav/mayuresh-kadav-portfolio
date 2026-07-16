@@ -461,23 +461,59 @@ section {
   background-color: #ffffff;
   border-radius: 18px;
   padding: 24px;
-  min-height: 170px;
   box-shadow: 0 12px 35px rgba(20, 33, 77, 0.06);
-}
-
-.tag-chip {
-  font-size: 13px;
-  background-color: #f3f6ff;
-  color: #334155;
-  padding: 6px 12px;
-  border-radius: 999px;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .skill-card-title {
-  font-size: 12px;
+  font-size: 14px;
   text-transform: uppercase;
-  color: #888888;
-  margin-bottom: 12px;
+  color: #222222;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.skill-card .tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.skill-card .tag-chip {
+  font-size: 13px;
+  font-weight: 700;
+  color: #222222;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+
+.skill-card .tag-chip::after {
+  content: "";
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .skill-card {
+    padding: 18px;
+  }
+
+  .skill-card-title {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1016,6 +1052,40 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .skill-card {
+    aspect-ratio: 1 / 1;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+    min-height: unset;
+  }
+
+  .skill-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #222;
+  }
+
+  .tag-list {
+    display: block;
+    gap: 10px;
+  }
+
+  .tag-chip {
+    background-color: transparent;
+    color: #222;
+    font-weight: 700;
+    padding: 0;
+    border-radius: 0;
+    display: inline;
+  }
+
+  .tag-chip:not(:last-child)::after {
+    content: " • ";
+    color: #999;
+  }
+
   .contact-buttons {
     flex-direction: column;
     align-items: stretch;
@@ -1129,6 +1199,25 @@ footer {
     padding: 10px 12px;
     border-radius: 16px;
     width: 100%;
+  }
+
+  .internship-card .tag-list,
+  .project-body .tag-list {
+    background: #f7f9ff;
+    border: 1px solid #dce5f1;
+    border-radius: 18px;
+    padding: 16px;
+    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .internship-card .tag-chip,
+  .project-body .tag-chip {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    text-align: left;
+    width: auto;
   }
 }
 
