@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { Github, Linkedin, Mail, ArrowUpRight, Menu, X, Trophy, Briefcase, Star, Phone ,MapPin} from "lucide-react";
 import "./App.css";
 import MentroXR from "./pages/MentroXR.jsx";
@@ -535,7 +535,12 @@ function PortfolioPage({ scrollTo, menuOpen, setMenuOpen, onOpenCaseStudy }) {
 
 export default function App() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, [location.pathname]);
 
   const scrollTo = (href) => {
     setMenuOpen(false);
